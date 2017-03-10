@@ -14,6 +14,12 @@ class EventObserver implements ObserverInterface
         //}
 
         $event_name = $observer->getEventName();
+
+        $file = '/tmp/execute.log';
+        $current = file_get_contents($file);
+        $current .= $event_name;
+        file_put_contents($file, $current);
+
         return;
     }
 
@@ -25,6 +31,14 @@ class EventObserver implements ObserverInterface
         //}
 
         $event_name = $observer->getEventName();
+
+
+        $file = '/tmp/dispatch.log';
+        $current = file_get_contents($file);
+        $current .= $event_name;
+        file_put_contents($file, $current);
+
+
         return;
     }
 }

@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
     <event name="customer_save_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
     <event name="customer_delete_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
     <event name="catalog_product_save_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
     <event name="catalog_product_delete_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
     <event name="sales_order_save_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
     <event name="sales_order_delete_after">
-        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver" method="dispatch" />
+        <observer name="custom_observer" instance="goliasz\prima2\Observer\EventObserver"/>
     </event>
 </config>

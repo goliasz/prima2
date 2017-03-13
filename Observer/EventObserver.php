@@ -13,13 +13,21 @@ class EventObserver implements ObserverInterface
         //    return;
         //}
 
-        $event_name = $observer->getEventName();
+//        $event_name = $observer->getEventName();
 
-        $file = '/tmp/execute.log';
-        $current = file_get_contents($file);
-        $current .= $event_name;
-        file_put_contents($file, $current);
-
+//        $file = '/tmp/execute.log';
+//        $current = file_get_contents($file);
+//        $current .= $event_name;
+//        file_put_contents($file, $current);
+//        try {
+          $event_name = $observer->getEventName();
+          $myfile = fopen("/tmp/debug.log", "a+") or die("Unable to open file!");
+          fwrite($myfile, print_r($event_name,true));
+          fclose($myfile);
+//        }
+//        catch (Exception $e) {
+          //
+//        } 
         return;
     }
 
@@ -30,13 +38,13 @@ class EventObserver implements ObserverInterface
         //    return;
         //}
 
-        $event_name = $observer->getEventName();
+//        $event_name = $observer->getEventName();
 
 
-        $file = '/tmp/dispatch.log';
-        $current = file_get_contents($file);
-        $current .= $event_name;
-        file_put_contents($file, $current);
+//        $file = '/tmp/dispatch.log';
+//        $current = file_get_contents($file);
+//        $current .= $event_name;
+//        file_put_contents($file, $current);
 
 
         return;
